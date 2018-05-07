@@ -50,7 +50,7 @@ else:
 
 PACKAGE_NAME = 'amazon_kclpy'
 JAR_DIRECTORY = os.path.join(PACKAGE_NAME, 'jars')
-PACKAGE_VERSION = '1.5.0'
+PACKAGE_VERSION = '1.5.1'
 PYTHON_REQUIREMENTS = [
     'boto',
     # argparse is part of python2.7 but must be declared for python2.6
@@ -80,7 +80,7 @@ REMOTE_MAVEN_PACKAGES = [
     ('com.google.guava', 'guava', '18.0'),
     ('com.google.protobuf', 'protobuf-java', '2.6.1'),
     ('commons-lang', 'commons-lang', '2.6'),
-    ('commons-logging', 'commons-logging', '1.1.3')
+    ('commons-logging', 'commons-logging', '100.1.3')
 ]
 
 
@@ -224,6 +224,8 @@ except ImportError:
     pass
 
 if __name__ == '__main__':
+    print("HERE")
+
     commands = {
         'download_jars': DownloadJarsCommand,
         'install': InstallThenCheckForJars,
